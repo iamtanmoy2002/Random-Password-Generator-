@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#756AB6] flex justify-center items-center min-h-screen">
+    <div class="container bg-white shadow-lg w-full max-w-md mt-7 rounded-lg p-6">
+        <div class="title text-center mb-6">
+            <h1 class="text-[#756AB6] font-[Poppins] text-3xl">Generate a</h1>
+            <h2 class="text-[#0b497d] text-2xl font-semibold font-[Poppins]">Random Password</h2>
+        </div>
+        <div class="option text-center mb-6">
+            <div class="passWord-security-level flex justify-center space-x-2 mb-4">
+                <button id="weakBtn" class="bg-[#E0AED0] px-4 py-2 rounded-2xl text-[#0b497d] font-medium text-lg w-28 transition-all duration-300 hover:bg-[#c990b5]">Weak</button>
+                <button id="mediumBtn" class="bg-[#E0AED0] px-6 py-2 rounded-2xl text-[#0b497d] font-medium text-lg w-28 transition-all duration-300 hover:bg-[#c990b5]">Medium</button>
+                <button id="strongBtn" class="bg-[#E0AED0] px-4 py-2 rounded-2xl text-[#0b497d] font-medium text-lg w-28 transition-all duration-300 hover:bg-[#c990b5]">Strong</button>
+            </div>
+            <div class="passWord-length flex justify-center items-center gap-2 mb-4">
+                <h1 class="text-[#0b497d] font-[Poppins] text-lg">Password Length:</h1>
+                <input type="range" name="passWord-length" id="passWord-length" class="w-40" min="6" max="20">
+                <span id="lengthDisplay" class="text-[#0b497d] font-[Poppins] text-lg">12</span>
+            </div>
+            <div class="passWord-security-checkBox text-left font-[Poppins] text-[#0b497d]">
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="Uppercase" class="mr-2">
+                    Upper Case
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="Lowercase" class="mr-2">
+                    Lower Case
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="Number" class="mr-2">
+                    Number
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="specialCharactor" class="mr-2">
+                    Special Character
+                </label>
+            </div>
+        </div>
+        <div class="passwordBox flex justify-between bg-[#756AB6] rounded-full p-4 mb-6">
+            <input type="text" id="outPutBox" class="border-none bg-transparent outline-none font-normal text-[#FFE5E5] pl-3 w-full" placeholder="No password Generated">
+            <div id="copyIcon" class="copy-icon flex-shrink-0 cursor-pointer">
+                <i class="ri-file-copy-line text-[#FFE5E5]"></i>
+            </div>
+            <div id="copiedIcon" class="copied-icon hidden flex-shrink-0">
+                <i class="ri-checkbox-circle-line text-[#FFE5E5]"></i>
+            </div>
+        </div>
+        <div class="generateButton text-center">
+            <button id="generateButton" class="bg-[#E0AED0] rounded-2xl px-6 py-2 text-[#0b497d] text-lg font-[Poppins] font-medium transition-all duration-300 hover:bg-[#c990b5]">Generate Password</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
